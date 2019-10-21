@@ -1,0 +1,34 @@
+package Selenium.maven.Selenium.maven.demo;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class TestGoogleSearchEngine {
+	private static WebDriver driver;
+	
+	@BeforeTest
+	public static void configureDriver() {
+		System.setProperty("webdriver.chrome.driver" ,  "/Users/venkat/Downloads/chromedriver");
+		driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+	}
+	@Test
+	public static void testHelloWorld() throws InterruptedException {
+		driver.get("file:///Users/venkat/Documents/Atom/helloworld.html");
+		Thread.sleep(1000);
+		Assert.assertEquals("Hello world!", driver.findElement(By.id("hello")).getText());
+	}
+	
+	@Test
+	public static void testGoogleSearch() throws InterruptedException {
+		driver.get("https://www.google.com");
+		Thread.sleep(1000);
+	}
+}
