@@ -225,7 +225,8 @@ Other values would be automatically filled in the dialogbox as shown in the imag
 
 ![GitHub repo opening](/src/main/java/Tutorial1/images/39.png)
 
-### Run Automation
+## Tutorial 1
+### Run Automation on a static webpage
 
 1. Righ click on the method which you want to run,for instance method "testHelloWorld()". Select Run As > TestNg Test.
 
@@ -236,3 +237,25 @@ You can see that, While running automation, we test our product (i.e. "HelloWorl
 2. After the automation is complete, in the console we can see the reports of the automation.
 
 ![GitHub repo opening](/src/main/java/Tutorial1/images/41.png)
+
+Here we are testing our product, i.e. Hellowworld.html webpage.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/42.png)
+
+it is rendered in browser as 
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/43.png)
+
+
+## Tutorial 2
+
+### Run Automation on a dynamic webpage
+
+1. Run each methods separately in TestForms.java and see the results.
+
+This is source code of our product to be tested
+![GitHub repo opening](/src/main/java/Tutorial1/images/44.png)
+
+This is how it is rendered in browser.
+![GitHub repo opening](/src/main/java/Tutorial1/images/45.png)
+
