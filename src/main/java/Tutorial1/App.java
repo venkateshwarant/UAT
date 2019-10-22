@@ -1,4 +1,4 @@
-package Selenium.maven.Selenium.maven.demo;
+package Tutorial1;
 
 import java.util.concurrent.TimeUnit;
 
