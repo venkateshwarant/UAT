@@ -85,6 +85,7 @@ Now that Java JDK 8 is installed, got and download Eclipse Oxygen IDE package fo
 
 [Download eclipse from here](https://www.eclipse.org/downloads/packages/release/helios/r/eclipse-ide-java-ee-developers)
 
+#### In Ubuntu machine
 ![Eclipse download message](/src/main/java/Tutorial1/images/2.png)
 
 Extract the downloaded package to the /opt directory using the commands below… by default Eclipse package should be downloaded into the ~/Downloads folder of your home directory…
