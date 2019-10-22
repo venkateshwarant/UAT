@@ -115,19 +115,18 @@ Steps to follow:
 
 2) You will see a dialog window, click “Add” button.
 
-![Add](/src/main/java/Tutorial1/images/14.png)
+![TestNG](/src/main/java/Tutorial1/images/15.png)
 
 3) Type name as you wish, lets take “TestNG” and type “http://beust.com/eclipse/” as location. Click OK.
 
-![TestNG](/src/main/java/Tutorial1/images/15.png)
+![Prev TestNG](/src/main/java/Tutorial1/images/16.png)
 
 4) You come back to the previous window but this time you must see TestNG option in the available software list. Just Click TestNG and press “Next” button.
 
-![Prev TestNG](/src/main/java/Tutorial1/images/16.png)
+![Accept TestNG](/src/main/java/Tutorial1/images/17.png)
 
 5) Click “I accept the terms of the license agreement” then click Finish.
 
-![Accept TestNG](/src/main/java/Tutorial1/images/17.png)
 
 6) You may or may not encounter a Security warning, if in case you do just click OK.
 
