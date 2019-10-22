@@ -189,40 +189,40 @@ Other values would be automatically filled in the dialogbox as shown in the imag
 
 7. You can see the cloned library in your git repository view.
 
-![GitHub repo cloning](/src/main/java/Tutorial1/images/30.png)
+![GitHub repo cloning](/src/main/java/Tutorial1/images/31.png)
 
 ### Opening the cloned UserAcceptanceTest GitHub Repository in your Eclipse
 
 1. Goto File > Open projects from file system
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/31.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/32.png)
 
 2. Click directory button
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/32.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/33.png)
 
 3. Select the cloned folder
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/33.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/34.png)
 
 4. You can see the selected folder in the directory tab now. Click finish after that.
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/33.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/35.png)
 
 5. Now you can see that your cloned github project is opened in eclipse. But still some errors are there in the repository.
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/34.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/36.png)
 
 6. Open TestGoogleSearchEngine.java file and click the error on the Line 15 as shown in the image. Select add TestNG library.
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/35.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/37.png)
 
 7. Now you can see the TestNG dependencies are added to your project.
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/36.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/38.png)
 
 8. Configure the proper location of chromedriver which we downloaded previously as shown in the figure
 
-![GitHub repo opening](/src/main/java/Tutorial1/images/36.png)
+![GitHub repo opening](/src/main/java/Tutorial1/images/39.png)
 
 
