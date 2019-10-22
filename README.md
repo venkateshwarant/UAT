@@ -143,5 +143,18 @@ Steps to follow:
 
 ![Check TestNG](/src/main/java/Tutorial1/images/22.png)
 
+### Downloading Chromedriver
+
+Check the Chrome browser version and download the corresponding chromedriver from https://chromedriver.chromium.org/downloads.
+
+For me Chrome browser version is 77.0.3865.120 (Official Build) (64-bit)
+
+So I've downloaded It's corresponding chromedriver version 77.
+
+![Check TestNG](/src/main/java/Tutorial1/images/23.png)
+
+![Check TestNG](/src/main/java/Tutorial1/images/24.png)
+
+
 
 
