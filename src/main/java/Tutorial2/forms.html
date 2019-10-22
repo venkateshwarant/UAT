@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function update(){
+        document.getElementById('holder').innerHTML= "Hi " +document.getElementById('firstname').value;
+      }
+    </script>
+  </head>
+  <body>
+      First name:<br>
+        <input id="firstname" type="text" name="firstname" placeholder="firstname" value=""><br>
+      Last name:<br>
+        <input id="lastname" type="text" name="lastname" placeholder="lastname" value=""><br><br>
+        <input id="m" type="radio" name="gender" value="male" checked> Male<br>
+        <input id="f" type="radio" name="gender" value="female"> Female<br>
+        <input id="0" type="radio" name="gender" value="other"> Other<br>
+        <input id="submit" type="submit" value="Submit" onclick="update()"><br><br><br><br><br><br>
+      <div id="holder">
+
+      </div>
+  </body>
+</html>
