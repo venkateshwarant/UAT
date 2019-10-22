@@ -141,6 +141,7 @@ Steps to follow:
 
 10) After restart, verify if TestNG was indeed successfully installed. Right click on you project and see if TestNG is displayed in the opened menu.
 
+![Check TestNG](/src/main/java/Tutorial1/images/22.png)
 
 
 
