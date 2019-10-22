@@ -155,6 +155,74 @@ So I've downloaded It's corresponding chromedriver version 77.
 
 ![Check TestNG](/src/main/java/Tutorial1/images/24.png)
 
+I've Downloaded my chromedriver in location "/Users/venkat/Downloads/chromedriver". Get the location of the chromedriver in your machine.
 
+### Cloning the UAT GitHub Repository in your Eclipse
+
+1. Open eclipse and go to Window > Show view > Other
+
+![Other view](/src/main/java/Tutorial1/images/25.png)
+
+2. Select Git hub repository
+
+![GitHub view](/src/main/java/Tutorial1/images/26.png)
+
+3. You could be able to see the git repository view in the left bottom corner of the eclipse. Select clone a repository icon as shown in the image
+
+![GitHub repo view](/src/main/java/Tutorial1/images/27.png)
+
+4. Enter the below values in the dialog box
+
+URI: https://github.com/venkateshwarant/UAT.git
+
+Other values would be automatically filled in the dialogbox as shown in the image
+
+![GitHub repo view](/src/main/java/Tutorial1/images/28.png)
+
+5. Select master branch and click next.
+
+![GitHub repo cloning](/src/main/java/Tutorial1/images/29.png)
+
+6. Give the name of the directory as per your wish.
+
+![GitHub repo cloning](/src/main/java/Tutorial1/images/30.png)
+
+7. You can see the cloned library in your git repository view.
+
+![GitHub repo cloning](/src/main/java/Tutorial1/images/30.png)
+
+### Opening the cloned UserAcceptanceTest GitHub Repository in your Eclipse
+
+1. Goto File > Open projects from file system
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/31.png)
+
+2. Click directory button
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/32.png)
+
+3. Select the cloned folder
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/33.png)
+
+4. You can see the selected folder in the directory tab now. Click finish after that.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/33.png)
+
+5. Now you can see that your cloned github project is opened in eclipse. But still some errors are there in the repository.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/34.png)
+
+6. Open TestGoogleSearchEngine.java file and click the error on the Line 15 as shown in the image. Select add TestNG library.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/35.png)
+
+7. Now you can see the TestNG dependencies are added to your project.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/36.png)
+
+8. Configure the proper location of chromedriver which we downloaded previously as shown in the figure
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/36.png)
 
 
