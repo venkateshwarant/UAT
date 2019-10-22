@@ -125,20 +125,22 @@ Steps to follow:
 
 ![Accept TestNG](/src/main/java/Tutorial1/images/17.png)
 
-5) Click “I accept the terms of the license agreement” then click Finish.
-
-
-6) You may or may not encounter a Security warning, if in case you do just click OK.
-
 ![Accept TestNG](/src/main/java/Tutorial1/images/18.png)
 
-9) Proceed with your workplace.
-
-10) After restart, verify if TestNG was indeed successfully installed. Right click on you project and see if TestNG is displayed in the opened menu.
+5) Click “I accept the terms of the license agreement” then click Finish.
 
 ![Accept TestNG](/src/main/java/Tutorial1/images/19.png)
 
+6) You may or may not encounter a Security warning, if in case you do just click Install Anyway.
+
 ![Accept TestNG](/src/main/java/Tutorial1/images/20.png)
 
+9) You may be required to restart your eclipse
+
 ![Accept TestNG](/src/main/java/Tutorial1/images/21.png)
+
+10) After restart, verify if TestNG was indeed successfully installed. Right click on you project and see if TestNG is displayed in the opened menu.
+
+
+
 
