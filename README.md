@@ -5,6 +5,7 @@ Automation of User Acceptance Testing
 We are going to use eclipse as our IDE for development of automation script.
 
 ### Installing Java
+#### In Ubuntu machine
 Eclipse requires Java JDK to be installed on the system you want to use… At this time, only Java JDK 8 is fully compatible.. to install JDK, use the steps below:
 
 The easiest way to install Oracle Java JDK 8 on Ubuntu is via a third party PPA… To add that PPA, run the commands below
@@ -18,7 +19,7 @@ Now that the PPA repository has been added to Ubuntu, run the commands below to 
 sudo apt update
 sudo apt install oracle-java8-installer
 ```
-When you run the commands above you’ll be prompted to access the license terms of the software… accept and continue.. Prompt message
+When you run the commands above you’ll be prompted to access the license terms of the software… accept and continue.. ![Prompt message](/src/main/java/Tutorial1/images/1.png)
 
 Set Oracle JDK8 as default, to do that, install the oracle-java8-set-default package. This will automatically set the JAVA env variable.
 ```
@@ -30,11 +31,15 @@ javac -version
 ```
 The command above will automatically set Java 9 as the default… and that should complete your installation, you can check you java version by running following command.
 
+#### In Mac machine
+
+
+
 ### Installing Eclipse
 Now that Java JDK 8 is installed, got and download Eclipse Oxygen IDE package for your systems.. the link below can be used to get it.
 
-Download eclipse from here Eclipse download message
-
+[Download eclipse from here](https://www.eclipse.org/downloads/packages/release/helios/r/eclipse-ide-java-ee-developers)
+![Eclipse download message](/src/main/java/Tutorial1/images/2.png)
 Extract the downloaded package to the /opt directory using the commands below… by default Eclipse package should be downloaded into the ~/Downloads folder of your home directory…
 
 Use the commands below to extract the content in the ~/Downloads folder… The next line launches the installer…
@@ -43,5 +48,6 @@ tar xfz ~/Downloads/eclipse-inst-linux64.tar.gz
 ~/Downloads/eclipse-installer/eclipse-inst
 ```
 Select the package IDE you want to install and continue… Select package
-
+![Select UDE](/src/main/java/Tutorial1/images/3.png)
 Use the onscreen instructions to complete the installer.. Accept the default installation directory and continue
+![Complete Installation](/src/main/java/Tutorial1/images/4.png)
