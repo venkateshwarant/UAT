@@ -42,41 +42,41 @@ Visit the "Download Java" page: https://java.com/download
 
 Click the "Free Java Download" button.
 
-![Java download message](/src/main/java/Tutorial1/images/5.jpg)
+![Java download message](/src/main/java/Tutorial1/images/5.png)
 
 You are then prompted to read and agree with the end user license agreement.
 
-![Java prompt message](/src/main/java/Tutorial1/images/6.jpg)
+![Java prompt message](/src/main/java/Tutorial1/images/6.png)
 
 Depending on which web browser you are using to download Java and depending on its configuration, you may be prompted to either Download or Save the installer file.
 
 If you are using Safari, the Java installer will automatically download to your Downloads folder. You can see its progress in the little "Downloads" icon in the top right. If you click it, it will show more detail.
-![Java safari download](/src/main/java/Tutorial1/images/7.jpg)
+![Java safari download](/src/main/java/Tutorial1/images/7.png)
 
 If you are using Safari, once it has finished downloading you can click the little magnifiying class to "Show in Finder", which will then open the "Downloads" folder.
 
-![Java download finder](/src/main/java/Tutorial1/images/8.jpg)
+![Java download finder](/src/main/java/Tutorial1/images/8.png)
 
 If you are using a different browser, you'll need to go to your "Downloads" folder using Finder.
 
 Unpack and run the installer
 Depending on which web browser you're using and your browser's configuration, your browser may automatically open the ".dmg" file which was just downloaded.
 
-![Java download dmg](/src/main/java/Tutorial1/images/9.jpg)
+![Java download dmg](/src/main/java/Tutorial1/images/9.png)
 
 Install Java
 
-![Java install dmg](/src/main/java/Tutorial1/images/10.jpg)
+![Java install dmg](/src/main/java/Tutorial1/images/10.png)
 
 You are now running the Java installer. Click the "Next" button to proceed.
 
 The installer will then download and install the latest version of Java.
 
-![Java installer running](/src/main/java/Tutorial1/images/11.jpg)
+![Java installer running](/src/main/java/Tutorial1/images/11.png)
 
 When the installation is finished, you are told that after you click the "Close" button, your browser will open so that you can verify Java is working.
 
-![Java installer finished](/src/main/java/Tutorial1/images/12.jpg)
+![Java installer finished](/src/main/java/Tutorial1/images/12.png)
 
 
 
