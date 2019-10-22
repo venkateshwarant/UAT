@@ -231,8 +231,8 @@ Other values would be automatically filled in the dialogbox as shown in the imag
 
 ![GitHub repo opening](/src/main/java/Tutorial1/images/40.png)
 
-You can see that, While running automation, we test our product that is "HelloWorld.html" for it's content in the field with id "hello".
+You can see that, While running automation, we test our product (i.e. "HelloWorld.html") for it's content in the field with id "hello".
 
-2. After the automation is completed in the console we can see the reports of the automation.
+2. After the automation is complete, in the console we can see the reports of the automation.
 
 ![GitHub repo opening](/src/main/java/Tutorial1/images/41.png)
