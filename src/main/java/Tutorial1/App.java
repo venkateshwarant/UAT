@@ -13,9 +13,10 @@ public class App
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //maximize
 		driver.manage().window().maximize();
+		
+		
 		driver.get("file:///Users/venkat/Documents/Atom/helloworld.html");
-//		driver.get("https://www.google.com");
-
+		
 		Thread.sleep(1000);
 		
     }
