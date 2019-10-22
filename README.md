@@ -149,9 +149,9 @@ Check the Chrome browser version and download the corresponding chromedriver fro
 
 For me Chrome browser version is 77.0.3865.120 (Official Build) (64-bit)
 
-So I've downloaded It's corresponding chromedriver version 77.
-
 ![Check TestNG](/src/main/java/Tutorial1/images/23.png)
+
+So I've downloaded It's corresponding chromedriver version 77.
 
 ![Check TestNG](/src/main/java/Tutorial1/images/24.png)
 
