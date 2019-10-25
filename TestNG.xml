@@ -4,6 +4,7 @@
     <classes>
 
          <class name="Tutorial1.TestGoogleSearchEngine" />
+         <class name="Tutorial2.TestForms" />
     </classes>
 
   </test>
