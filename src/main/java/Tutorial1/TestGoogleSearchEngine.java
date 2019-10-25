@@ -19,14 +19,14 @@ public class TestGoogleSearchEngine {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
-	@Test
+	@Test(groups = { "include-test-one" })
 	public static void testHelloWorld() throws InterruptedException {
 		driver.get("file:///Users/venkat/Documents/Atom/helloworld.html");
 		Thread.sleep(1000);
 		Assert.assertEquals("Hello world!", driver.findElement(By.id("hello")).getText());
 	}
 	
-	@Test
+	@Test(groups = { "include-test-two" })
 	public static void testGoogleSearch() throws InterruptedException {
 		driver.get("https://www.google.com");
 		Thread.sleep(1000);
