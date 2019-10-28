@@ -249,7 +249,7 @@ it is rendered in browser as
 
 ## Tutorial 2
 
-### Run Automation on a dynamic webpage
+### Run Automation on a dynamic webpage (without a server)
 
 1. Run each methods separately in TestForms.java and see the results.
 
@@ -258,4 +258,270 @@ This is source code of our product to be tested
 
 This is how it is rendered in browser.
 ![GitHub repo opening](/src/main/java/Tutorial1/images/45.png)
+
+
+## Tutorial 3
+
+### Run Automcation on a dynamic webpage hosted under a server
+
+To host the server, see to the tutorial here on https://github.com/venkateshwarant/DemoDynamicServer
+
+Let's automate the testing of the above webpage, it's URL is http://localhost:8081/DemoDynamicServer/FirstServlet 
+
+The port number is the one which you configured in server.xml.
+
+1. Run each methods separately in TestServerWebpage.java and see the results. 
+
+method testContent-> should always pass
+method testTime-> should always fails, since we are asserting the date with some old values
+
+
+# Running automation via xml file
+
+TestNG has provided the facility to run automation scripts with the help of xml test suites.
+
+for eg., below is a xml script to run all the test methods in class- TestGoogleSearchEngine, TestForms, TestServerWebpage
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Group of group Suite" verbose="1">
+  <test name="Group of group Test">
+    <classes>
+
+         <class name="Tutorial1.TestGoogleSearchEngine" />
+         <class name="Tutorial2.TestForms" />
+         <class name="Tutorial3.TestServerWebpage" />
+    </classes>
+
+  </test>
+</suite>
+```
+
+Save it in the project directory and to run it, right click the xml file and select run as TestNG test as shown in the image.
+
+![GitHub repo opening](/src/main/java/Tutorial1/images/82.png)
+
+To learn more about writing TestNG.xml follow https://testng.org/doc/documentation-main.html
+
+# Running automation via terminal using Maven.
+
+To run automation via maven, you should install maven in your terminal. 
+
+## Installing maven using homebrew
+Follow below steps to install maven in your terminal.
+
+Run following command on Terminal
+```
+brew update
+brew install maven
+```
+The response will be similar to
+
+```
+    ==> Using the sandbox
+    ==> Downloading https://www.apache.org/dyn/closer.cgi?path=maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.t
+    ==> Best Mirror http://supergsego.com/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+    ######################################################################## 100.0%
+    /usr/local/Cellar/maven/3.5.0: 106 files, 9.8MB, built in 15 seconds
+```
+Check location of mvn
+```
+which mvn
+```
+
+Response would be like => /usr/local/bin/mvn
+
+Check the version using mvn
+Note the location of "Maven home"
+```
+mvn -v
+```
+ 
+response would be like => 
+
+Apache Maven 3.6.2 (40f52333136460af0dc0d7232c0dc0bcf0d9e117; 2019-08-27T17:06:16+02:00)
+Maven home: /usr/local/Cellar/maven/3.6.2/libexec
+Java version: 13.0.1, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
+Default locale: en_GB, platform encoding: UTF-8
+OS name: "mac os x", version: "10.14.6", arch: "x86_64", family: "mac"
+
+## Running automation
+
+you should add the following lines in the pom.xml to run automation via terminal.
+
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Selenium.maven</groupId>
+  <artifactId>Selenium.maven.demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Selenium.maven.demo</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+    <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.3.1</version>
+</dependency>
+  </dependencies>
+  <build>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <!-- Following plugin executes the testng tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.14.1</version>
+                <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <!-- Compiler plugin configures the java version to be usedfor compiling
+                the code -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+In the above pom.xml, we have mentioned to run TestNG.xml via maven-surefire-plugin.
+
+To run this TestNG.xml using maven from terminal, run the following command in the location where your pom.xml is present.
+```
+mvn test
+```
+
+You will get the logs similar to the below logs.
+```
+MF0055:Selenium.maven.demo venkat$ mvn test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for Selenium.maven:Selenium.maven.demo:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 57, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< Selenium.maven:Selenium.maven.demo >-----------------
+[INFO] Building Selenium.maven.demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Selenium.maven.demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/venkat/eclipse-workspace/Selenium.maven.demo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Selenium.maven.demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/venkat/eclipse-workspace/Selenium.maven.demo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Selenium.maven.demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/venkat/eclipse-workspace/Selenium.maven.demo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Selenium.maven.demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.14.1:test (default-test) @ Selenium.maven.demo ---
+[INFO] Surefire report directory: /Users/venkat/eclipse-workspace/Selenium.maven.demo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.testng.xml.XMLParser (file:/Users/venkat/.m2/repository/org/testng/testng/6.3.1/testng-6.3.1.jar) to constructor com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl()
+WARNING: Please consider reporting this to the maintainers of org.testng.xml.XMLParser
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 13930
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572267931.769][WARNING]: This version of ChromeDriver has not been tested with Chrome version 78.
+Oct 28, 2019 2:05:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 45565
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572267932.594][WARNING]: This version of ChromeDriver has not been tested with Chrome version 78.
+Oct 28, 2019 2:05:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 16505
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572267933.647][WARNING]: This version of ChromeDriver has not been tested with Chrome version 78.
+Oct 28, 2019 2:05:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 33.195 sec <<< FAILURE!
+testLastNameField(Tutorial2.TestForms)  Time elapsed: 2.079 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<Thamilselvan> but was:<Venkateshwaran>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:171)
+	at org.testng.Assert.assertEquals(Assert.java:181)
+	at Tutorial2.TestForms.testLastNameField(TestForms.java:43)
+
+testTime(Tutorial3.TestServerWebpage)  Time elapsed: 2.039 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<Date=Mon Oct 28 14:06:01 CET 2019> but was:<Date=Mon Oct 28 12:29:20 CET 2019>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:171)
+	at org.testng.Assert.assertEquals(Assert.java:181)
+	at Tutorial3.TestServerWebpage.testTime(TestServerWebpage.java:42)
+
+
+Results :
+
+Failed tests: 
+  TestForms.testLastNameField:43 expected:<Thamilselvan> but was:<Venkateshwaran>
+  TestServerWebpage.testTime:42 expected:<Date=Mon Oct 28 14:06:01 CET 2019> but was:<Date=Mon Oct 28 12:29:20 CET 2019>
+
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.301 s
+[INFO] Finished at: 2019-10-28T14:06:03+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.14.1:test (default-test) on project Selenium.maven.demo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/venkat/eclipse-workspace/Selenium.maven.demo/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+```
 
