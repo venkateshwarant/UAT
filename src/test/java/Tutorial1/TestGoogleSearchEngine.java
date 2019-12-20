@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -14,7 +15,7 @@ public class TestGoogleSearchEngine {
 	
 	@BeforeTest
 	public static void configureDriver() {
-		System.setProperty("webdriver.chrome.driver" ,  "/Users/venkat/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver" ,  System.getProperty("user.home")+"/chromedriver");
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -30,5 +31,9 @@ public class TestGoogleSearchEngine {
 	public static void testGoogleSearch() throws InterruptedException {
 		driver.get("https://www.google.com");
 		Thread.sleep(1000);
+	}
+	@AfterSuite
+	public static void closeDriver() {
+		driver.quit();
 	}
 }
