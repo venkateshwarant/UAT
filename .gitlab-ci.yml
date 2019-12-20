@@ -1,35 +1,20 @@
 image: maven:latest
 
 stages:
-  - build
-  - test
-  - run
   - deploy
+  - test
 cache:
   paths:
     - target/
-
-build_app:
-  stage: build
-  script:
-    - mvn compile
 
 test_app:
   stage: test
   script:
     - mvn test
 
-run_app:
-  stage: run
-  script:
-    - mvn package
-    - mvn exec:java -Dexec.mainClass="Tutorial1.App"
-deploy_app:
+deploy:
     stage: deploy
+    tags:
+    - stage-vm-shell
     script:
-    - echo "Deploy review app"
-    artifacts:
-        name: "my-app"
-        paths:
-        - target/*.jar
-
+    - cp src/main/java/Tutorial1/helloworld.html /home/vagrant/stage
