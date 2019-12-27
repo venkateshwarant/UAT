@@ -525,3 +525,38 @@ Tests run: 8, Failures: 2, Errors: 0, Skipped: 0
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ```
 
+## Creating Selenium grid
+Folow tutorial in https://github.com/venkateshwarant/SeleniumGrid to create a selenium grid and check if the server has started successfully.
+
+## Creating stage VM
+
+The product is deployed in the stage-VM for running automation test.
+
+## Integrating test automation with the pipeline
+
+
+```
+image: maven:latest
+
+stages:
+  - deploy
+  - test
+cache:
+  paths:
+    - target/
+
+test_app:
+  stage: test
+  script:
+    - mvn test
+
+deploy:
+    stage: deploy
+    tags:
+    - stage-vm-shell
+    script:
+    - pwd
+    - ls
+    - cp src/main/java/Tutorial1/helloworld.html /home/vagrant/stage
+
+```
