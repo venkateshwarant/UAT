@@ -565,3 +565,6 @@ deploy:
 You can see that, In this pipeline file, we have defined following tasks
 * deployed our product in the stage VM
 * Started our automation (our automation runs in the remote node), In the automation we have pointed the test case to run on the product which is deployed in the stage vm.
+
+## Parallel execution of test cases
+Follow tutorial in https://github.com/venkateshwarant/PerformantContinuousTesting for creating parallel test suites
