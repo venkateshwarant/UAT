@@ -17,4 +17,4 @@ deploy:
     tags:
     - stage-vm-shell
     script:
-    - cp src/main/java/Tutorial1/helloworld.html /home/vagrant/stage
+    - cp src/main/java/helloworld.html /home/vagrant/stage
