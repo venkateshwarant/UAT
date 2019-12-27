@@ -528,6 +528,9 @@ Tests run: 8, Failures: 2, Errors: 0, Skipped: 0
 ## Creating Selenium grid
 Folow tutorial in https://github.com/venkateshwarant/SeleniumGrid to create a selenium grid and check if the server has started successfully.
 
+## Create a integration server
+follow tutorial in https://github.com/venkateshwarant/Creating_Integration_Server to create a integration server with katalon runtime engine
+
 ## Creating stage VM
 Follow tutorial in https://github.com/venkateshwarant/Creating-Stage-VM to create a stage-vm for our helloworld product
 * The product is deployed in the stage-VM for running automation test.
