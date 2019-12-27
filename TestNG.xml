@@ -3,9 +3,12 @@
   <test name="Group of group Test">
     <classes>
 
-         <class name="Tutorial1.TestGoogleSearchEngine" />
-         <class name="Tutorial2.TestForms" />
-    </classes>
+         <!-- <class name="Tutorial1.TestGoogleSearchEngine" /> -->
+<!--          <class name="Tutorial2.TestForms" />
+ -->         <class name="Tutorial3.RemoteTestExecution" />
+         
+<!--          <class name="Tutorial3.TestServerWebpage" />-->
+     </classes>
 
   </test>
 </suite>
