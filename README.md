@@ -529,27 +529,25 @@ Tests run: 8, Failures: 2, Errors: 0, Skipped: 0
 Folow tutorial in https://github.com/venkateshwarant/SeleniumGrid to create a selenium grid and check if the server has started successfully.
 
 ## Creating stage VM
-
-The product is deployed in the stage-VM for running automation test.
+Follow tutorial in https://github.com/venkateshwarant/Creating-Stage-VM to create a stage-vm for our helloworld product
+* The product is deployed in the stage-VM for running automation test.
 
 ## Integrating test automation with the pipeline
-
+Add the following content in .gitlab-ci.yml
 
 ```
-image: maven:latest
 
+image: maven:latest
 stages:
   - deploy
   - test
 cache:
   paths:
     - target/
-
 test_app:
   stage: test
   script:
     - mvn test
-
 deploy:
     stage: deploy
     tags:
@@ -558,5 +556,9 @@ deploy:
     - pwd
     - ls
     - cp src/main/java/Tutorial1/helloworld.html /home/vagrant/stage
-
+    
 ```
+
+You can see that, In this pipeline file, we have defined following tasks
+* deployed our product in the stage VM
+* Started our automation (our automation runs in the remote node), In the automation we have pointed the test case to run on the product which is deployed in the stage vm.
